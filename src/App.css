@@ -7,24 +7,7 @@
             "n c";
     grid-template-rows: 60px 1fr;
     grid-auto-columns: 2fr 10fr;
-}
-
-.header {
-    grid-area: h;
-    background-color: crimson;
-}
-.header img {
-    width: 20px;
-}
-
-.nav {
-    grid-area: n;
-    background-color: coral;
-}
-
-.content {
-    grid-area: c;
-    background-color: darkred;
+    /*grid-gap: 10px;*/
 }
 
 
