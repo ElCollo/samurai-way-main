@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './MyPost.module.css'
+import s from './MyPosts.module.css'
 import Post from './Post/Post'
 
 const MyPost = () => {
@@ -11,7 +11,7 @@ const MyPost = () => {
                 <button>Add post</button>
 
             </div>
-            <div className='s.posts'>
+            <div className={s.post}>
                 <Post message='Hi, how are you?' likesCount='13'/>
                 <Post message='It`s my first Post' likesCount='22'/>
             </div>
