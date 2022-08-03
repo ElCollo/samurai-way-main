@@ -1,34 +1,39 @@
 import React from 'react';
 import s from './Dialogs.module.css'
 import {NavLink} from 'react-router-dom';
+import retryTimes = jest.retryTimes;
+
+const DialogItem = (props: any) => {
+    let path ="/dialogs/" + props.id
+    return (
+        <div className={s.dialog + ' ' + s.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message = (props: any) => {
+    return(
+        <div className={s.dialog}>{props.message}</div>
+    )
+}
 
 const Dialogs = () => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <div className={s.dialog + ' ' + s.active}>
-                    <NavLink to='/dialogs/1'>Gleb</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/2'>Leon</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/3'>Kirill</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/4'>Roma</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/5'>Vlad</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/6'>Nikita</NavLink>
-                </div>
+
+                <DialogItem name='Gleb' id='1'/>
+                <DialogItem name='Leon' id='2'/>
+                <DialogItem name='Kirill' id='3'/>
+                <DialogItem name='Roma' id='4'/>
+                <DialogItem name='Vlad' id='5'/>
+                <DialogItem name='Nikita' id='6'/>
             </div>
             <div className={s.messages}>
-                <div className={s.dialog}>Hi</div>
-                <div className={s.dialog}>Hello</div>
-                <div className={s.dialog}>Whats up?</div>
+                <Message message='Hi'/>
+                <Message message='Hello'/>
+                <Message message='Whats up?'/>
             </div>
         </div>
     )
