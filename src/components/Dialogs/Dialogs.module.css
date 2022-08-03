@@ -1,4 +1,33 @@
 .dialogs {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dialogsItems {
+    display: table-cell;
+    width: 2fr;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.dialogsItems .active {
+    color: white;
+}
+
+.messages {
+    display: table-cell;
+    width: 10fr;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.messages .message {
+}
+
+
+/*
+.dialogs {
     display: grid;
     grid-auto-columns: 2fr 10fr;
 }
@@ -16,4 +45,4 @@
 
 .messages .message {
 
-}
+}*/
