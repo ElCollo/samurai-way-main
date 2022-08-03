@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Dialogs.module.css'
 import {NavLink} from 'react-router-dom';
-import retryTimes = jest.retryTimes;
+
 
 const DialogItem = (props: any) => {
     let path ="/dialogs/" + props.id
@@ -22,7 +22,6 @@ const Dialogs = () => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-
                 <DialogItem name='Gleb' id='1'/>
                 <DialogItem name='Leon' id='2'/>
                 <DialogItem name='Kirill' id='3'/>
